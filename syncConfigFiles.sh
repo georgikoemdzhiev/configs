@@ -1,3 +1,7 @@
+#!/bin/bash
+
+# Script that syncs local changes to Git
+
 echo "copping bashrc..."
 cp ~/.bashrc ./bashrc
 echo "copping i3 config..."
