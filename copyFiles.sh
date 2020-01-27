@@ -25,4 +25,4 @@ git config --global credential.helper 'cache --timeout 604800'
 
 echo "pushing changes upstream..."
 git push -u origin master 
-echi "done!"
+echo "done!"
