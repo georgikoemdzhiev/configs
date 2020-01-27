@@ -14,5 +14,11 @@ git add *
 
 echo "committing chages..."
 git commit -m "Changes"
+
+# save the git credentials in memory
+git config credential.helper store
+# override the default (15 minutes) to 7 days
+git config --global credential.helper 'cache --timeout 604800'
+
 echo "pushing changes upstream..."
 git push -u origin master 
