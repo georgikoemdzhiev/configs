@@ -433,5 +433,3 @@ exec "setxkbmap -option grp:alt_shift_toggle -layout gb,bg -variant extd,phoneti
 
 # set natural scrolling of the trackpad 
 exec "xinput set-prop 'DLL07BE:01 06CB:7A13 Touchpad' 'libinput Natural Scrolling Enabled' 1"
-# bind mod+g to open Godot GD script and Mono
-bindsym $mod+g exec /home/georgi/Scripts/godots.sh
