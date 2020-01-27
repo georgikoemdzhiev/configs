@@ -10,6 +10,9 @@ if [ ! -f .git ]; then
 	git remote add origin https://github.com/georgikoemdzhiev/configs.git
 fi
 
+echo "get latest..."
+git pull
+
 git add *
 
 echo "committing chages..."
