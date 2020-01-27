@@ -15,4 +15,4 @@ git add *
 echo "committing chages..."
 git commit -m "Changes"
 echo "pushing changes upstream..."
-git push 
+git push -u origin master 
