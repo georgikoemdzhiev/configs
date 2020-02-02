@@ -24,9 +24,8 @@ git add *
 
 echo "commit chages..."
 
-echo "Input commit message:"
+read $commitMsg -p "Input commit message:"
 
-read $commitMsg
 # if the user pressed Enter, just use generic commti msg
 if [ "$commitMsg" == "" ]; then
 	git commit -m "Changes"
