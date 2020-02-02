@@ -2,9 +2,6 @@
 
 # Script that syncs local changes to Git
 
-# Vars
-commitMsg=""
-
 echo "copping bashrc..."
 cp ~/.bashrc ./bashrc
 echo "copping i3 config..."
