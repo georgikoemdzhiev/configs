@@ -27,9 +27,9 @@ read commitMsg
 
 # if the user pressed Enter, just use generic commti msg
 if [ "$commitMsg" == "" ]; then
-	git commit -m "Changes"
+    git commit -m "Changes"
 else
-	git commit -m "$commitMsg"
+    git commit -m "$commitMsg"
 fi
 
 # save the git credentials in memory (below 'push' will prompt for those)
