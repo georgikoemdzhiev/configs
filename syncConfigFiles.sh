@@ -9,9 +9,9 @@ cp ~/.i3/config ./i3config
 
 
 if [ ! -f .git ]; then
-	echo "creating a git repo"
-	git init
-	git remote add origin https://github.com/georgikoemdzhiev/configs.git
+    echo "creating a git repo"
+    git init
+    git remote add origin https://github.com/georgikoemdzhiev/configs.git
 fi
 
 echo "get latest..."
@@ -20,7 +20,11 @@ echo "add changes to HEAD"
 git add *
 
 echo "commit chages..."
-git commit -m "changes"
+
+echo "Input commit message:"
+
+read commitMsg
+git commit -m "$commitMsg"
 
 # save the git credentials in memory (below 'push' will prompt for those)
 git config credential.helper store
@@ -28,5 +32,5 @@ git config credential.helper store
 git config --global credential.helper 'cache --timeout 604800'
 
 echo "pushing changes upstream..."
-git push -u origin master 
+git push -u origin master
 echo "done!"
