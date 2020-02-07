@@ -151,4 +151,4 @@ alias hdmiOutput="xrandr --output HDMI1 --mode 1920x1080"
 # VirtualBox shortcuts
 alias listVms="vboxmanage list vms"
 alias listRunningVms="vboxmanage list runningvms"
-
+alias vim=nvim
