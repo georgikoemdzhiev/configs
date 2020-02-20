@@ -6,7 +6,8 @@ echo "copping bashrc..."
 cp ~/.bashrc ./bashrc
 echo "copping i3 config..."
 cp ~/.i3/config ./i3config
-
+echo "copping Xresources file..."
+cp ~/.Xresources ./Xresources
 
 if [ ! -f .git ]; then
     echo "creating a git repo"
