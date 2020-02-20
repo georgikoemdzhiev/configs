@@ -8,7 +8,8 @@ echo "copy i3 config file..."
 echo "reload i3 to apply changes"
 i3-msg reload
 
-echo "copy bashrc..."
+echo "apply bashrc file..."
 \cp -f bashrc ~/.bashrc
-
+echo "apply Xresource file..."
+\cp -f Xresources ~/.Xresources
 echo "Done"
