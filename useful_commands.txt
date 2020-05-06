@@ -1,0 +1,44 @@
+# TO Export a list of installed packages
+pacman -Qqe > packages.txt
+
+# TO Import/install from a file
+pacman -S --needed - < packages.txt
+
+# The above will error out as we do have some packages installed from AUR 
+# So we can use that command:
+sudo pacman -S --needed $(comm -12 <(pacman -Slq | sort) <(sort packages.txt))
+
+
+
+
+# Extract the tar archive contents to a specific directory
+
+tar -xzvf home_dir.tar.gz -C /home
+
+# Copying over/restore the home directory 
+/bin/cp -rf /zzz/zzz/* /xxx/xxx
+or
+yes | cp -rf /zzz/zzz/* /xxx/xxx
+
+# Steps that I did:
+1. Install fresh Manjaro (I did pick "nonfree" graphics drivers
+2. After install, I went to "manjaro-settings-manager" -> "hardware configuration"
+and uninstalled the nonfree (i.e. "Prime" video drivers) and installed 430 Bumblebee hybrid drivers
+3. Installed Firefox
+	3.1. Install "JetBrains Mono" font as it's needed by some of my programs (i.e. the terminal)
+4. Copied over the /home directory 
+5. Deleted the contents of the "/home/.cache" directory
+6. Installed the "packages.txt" file using "sudo pacman -S --needed $(comm -12 <(pacman -Slq | sort) <(sort packages.txt))" command
+    6.1. If there is "exists in filesystem (owned by p11-kit)" error when installing the packages from step 6 execute:
+    sudo pacman-mirrors -g && sudo pacman -Syyu
+7. Repeat step 6
+
+Note: if I upgrade the system before installing my packages, it may not show the error in 6.1. step
+
+# Steam
+Try 
+1. 
+cd ~/.local/share
+mv Steam Steam-OLD
+
+2. steam --reset
