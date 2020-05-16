@@ -295,7 +295,7 @@ exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
 # exec --no-startup-id blueman-applet
 # exec_always --no-startup-id sbxkb
-# exec --no-startup-id start_conky_maia
+exec --no-startup-id start_conky_maia
 # exec --no-startup-id start_conky_green
 exec --no-startup-id xautolock -time 60 -locker blurlock
 exec_always --no-startup-id ff-theme-util
@@ -436,4 +436,5 @@ exec "setxkbmap -option grp:alt_shift_toggle -layout gb,bg -variant extd,phoneti
 
 # set natural scrolling of the trackpad 
 exec "xinput set-prop 'DLL07BE:01 06CB:7A13 Touchpad' 'libinput Natural Scrolling Enabled' 1"
-bindsym Shift+Ctrl+g exec --no-startup-id sh ./Programs/Godot/Godot_v3.2.1-stable_mono_x11_64/GodotGodot_v3.2.1-stable_mono_x11.64
+bindsym Shift+Ctrl+g exec ./Programs/Godot/Godot_v3.2.1-stable_mono_x11_64/Godot_v3.2.1-stable_mono_x11.64
+bindsym $mod+F10 exec ./Scripts/configs/monitorConfig.sh
