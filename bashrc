@@ -146,8 +146,6 @@ alias ei3="vim ~/.i3/config"
 alias buildGodot="scons -j8 platform=x11"
 alias ll="ls -l"
 alias update="sudo pacman -Syu"
-# casts the laptop screen through HDMI port
-alias hdmiOutput="xrandr --output HDMI-1 --mode 1920x1080"
 # VirtualBox shortcuts
 alias listVms="vboxmanage list vms"
 alias listRunningVms="vboxmanage list runningvms"
