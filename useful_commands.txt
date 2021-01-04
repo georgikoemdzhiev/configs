@@ -9,7 +9,9 @@ pacman -S --needed - < packages.txt
 sudo pacman -S --needed $(comm -12 <(pacman -Slq | sort) <(sort packages.txt))
 
 
+# Create a bachup of user directory
 
+tar --exclude='/home/georgi/.cache' -zcvpf /run/media/georgi/Samsung_T5/home_dir_backup/$(date +%d-%m-%Y).tar.gz /home/georgi
 
 # Extract the tar archive contents to a specific directory
 
